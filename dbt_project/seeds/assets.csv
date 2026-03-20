@@ -1,0 +1,13 @@
+asset_id,name,asset_type,line_id,manufacturer,model,installed_at
+CMP-001,Compressor 01 - Linha A,compressor,LINE_A,Atlas Copco,GA-110,2022-03-15
+CMP-002,Compressor 02 - Linha A,compressor,LINE_A,Atlas Copco,GA-110,2022-03-15
+CMP-003,Compressor 01 - Linha B,compressor,LINE_B,Schulz,MSV-40,2021-07-20
+CMP-004,Compressor 02 - Linha B,compressor,LINE_B,Schulz,MSV-40,2021-07-20
+MTR-001,Motor Elétrico 01 - Linha A,motor,LINE_A,WEG,W22 75cv,2023-01-10
+MTR-002,Motor Elétrico 02 - Linha A,motor,LINE_A,WEG,W22 75cv,2023-01-10
+MTR-003,Motor Elétrico 01 - Linha B,motor,LINE_B,Siemens,SIMOTICS 90kW,2022-09-05
+MTR-004,Motor Elétrico 02 - Linha B,motor,LINE_B,Siemens,SIMOTICS 90kW,2022-09-05
+BMB-001,Bomba Hidráulica 01 - Linha A,pump,LINE_A,KSB,Etanorm 32-160,2022-06-01
+BMB-002,Bomba Hidráulica 02 - Linha A,pump,LINE_A,KSB,Etanorm 32-160,2022-06-01
+BMB-003,Bomba Hidráulica 01 - Linha B,pump,LINE_B,Grundfos,NK 32-160,2021-11-15
+BMB-004,Bomba Hidráulica 02 - Linha B,pump,LINE_B,Grundfos,NK 32-160,2021-11-15

@@ -39,3 +39,7 @@ Thumbs.db
 *.pem
 *.key
 secrets/
+# Dados gerados localmente - não commitar
+*.duckdb
+dbt_project/seeds/sensor_readings.csv
+postgres/seeds/sensor_readings.csv

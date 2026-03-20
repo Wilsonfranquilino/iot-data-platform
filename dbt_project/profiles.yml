@@ -3,7 +3,7 @@ iot_data_platform:
   outputs:
     dev:
       type: duckdb
-      path: "{{ env_var('DBT_DUCKDB_PATH', '/tmp/iot_platform.duckdb') }}"
+      path: "{{ env_var('DBT_DUCKDB_PATH', 'C:/Projetos Claude/Iot/iot-data-platform/iot_platform.duckdb') }}"
       schema: main
       threads: 4
 
