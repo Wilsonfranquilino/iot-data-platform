@@ -1,0 +1,72 @@
+name: 'iot_data_platform'
+version: '1.0.0'
+config-version: 2
+
+profile: 'iot_data_platform'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  iot_data_platform:
+    staging:
+      +materialized: view
+      +schema: silver
+      +tags: ['staging']
+
+    intermediate:
+      +materialized: ephemeral
+      +tags: ['intermediate']
+
+    marts:
+      facts:
+        +materialized: incremental
+        +schema: gold
+        +unique_key: reading_id
+        +tags: ['fact', 'gold']
+      dimensions:
+        +materialized: table
+        +schema: gold
+        +tags: ['dim', 'gold']
+      kpis:
+        +materialized: table
+        +schema: gold
+        +tags: ['mart', 'gold']
+      ml:
+        +materialized: table
+        +schema: gold
+        +tags: ['ml', 'gold']
+
+seeds:
+  iot_data_platform:
+    +schema: raw
+    assets:
+      +column_types:
+        installed_at: timestamp
+    sensor_readings:
+      +column_types:
+        read_at: timestamp
+        temperature_c: float
+        vibration_mms: float
+        pressure_bar: float
+        rpm: integer
+        current_a: float
+        flow_lpm: float
+        energy_kwh: float
+
+vars:
+  alert_temp_warning: 90
+  alert_temp_critical: 100
+  alert_vibration_warning: 7
+  alert_vibration_critical: 10
+  alert_pressure_low_critical: 1.5
+  alert_pressure_high_critical: 9.0
+  alert_current_critical: 50
+  alert_flow_warning: 8
+  alert_rpm_warning_motor: 500
+  energy_anomaly_multiplier: 2
+  sensor_offline_minutes: 5

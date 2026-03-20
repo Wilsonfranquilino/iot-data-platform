@@ -1,0 +1,6 @@
+numpy>=1.26
+pandas>=2.2
+psycopg2-binary>=2.9
+kafka-python-ng>=2.2
+python-dotenv>=1.0
+tqdm>=4.66

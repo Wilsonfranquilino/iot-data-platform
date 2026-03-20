@@ -1,0 +1,41 @@
+# ─── Ambiente ─────────────────────────────────────────────────────────────────
+.env
+*.env.local
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─── dbt ──────────────────────────────────────────────────────────────────────
+dbt_project/target/
+dbt_project/logs/
+dbt_project/.user.yml
+
+# ─── Dados ────────────────────────────────────────────────────────────────────
+postgres/seeds/*.csv     # gerados pelo simulador — não versionar dados
+*.parquet
+*.arrow
+
+# ─── Docker ───────────────────────────────────────────────────────────────────
+.docker/
+
+# ─── IDEs ─────────────────────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Credenciais ──────────────────────────────────────────────────────────────
+*.pem
+*.key
+secrets/
